@@ -1,0 +1,115 @@
+/* スタイルのリセット */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sudoku-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sudoku-grid {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.sudoku-grid td {
+  border: 1px solid #bbb;
+  width: 11%;
+  height: 50px; /* セルの高さを固定 */
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5em;
+  color: #333;
+  background-color: #fafafa;
+  transition: background-color 0.3s;
+}
+
+.sudoku-grid td:hover {
+  background-color: #e0f7fa;
+}
+
+.sudoku-grid td:nth-child(3n) {
+  border-right: 2px solid #333;
+}
+
+.sudoku-grid tr:nth-child(3n) td {
+  border-bottom: 2px solid #333;
+}
+
+.number-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%; /* 中央寄せのために追加 */
+  justify-content: space-around; /* ボタン間のスペースを均等に配置 */
+}
+
+.number-selector button {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #00796b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.number-selector button.selected {
+  background-color: #ff5722; /* よりわかりやすい色 */
+  transform: scale(1.1); /* 選択時にサイズを少し拡大 */
+}
+
+.number-selector button:hover {
+  background-color: #004d40;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #00796b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}

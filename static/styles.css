@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
@@ -71,14 +71,15 @@ h1 {
   display: flex;
   justify-content: center;
   margin: 20px 0;
-  width: 100%; /* 中央寄せのために追加 */
-  justify-content: space-around; /* ボタン間のスペースを均等に配置 */
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap; /* フレックスボックスをラップ */
 }
 
 .number-selector button {
   width: 40px;
   height: 40px;
-  margin: 0 5px;
+  margin: 5px; /* スペースを均等にする */
   font-size: 1.2em;
   color: #fff;
   background-color: #00796b;
@@ -112,4 +113,18 @@ button {
 
 button:hover {
   background-color: #004d40;
+}
+
+/* メディアクエリを追加してレスポンシブデザインを対応 */
+@media (max-width: 600px) {
+  .sudoku-grid td {
+    height: 30px; /* 小さい画面向けに高さを調整 */
+    font-size: 1.2em;
+  }
+
+  .number-selector button {
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+  }
 }

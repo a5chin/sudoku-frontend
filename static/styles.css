@@ -1,4 +1,3 @@
-/* スタイルのリセット */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +42,7 @@ h1 {
 .sudoku-grid td {
   border: 1px solid #bbb;
   width: 11%;
-  height: 50px; /* セルの高さを固定 */
+  height: 50px;
   padding: 0;
   position: relative;
   cursor: pointer;
@@ -73,13 +72,13 @@ h1 {
   margin: 20px 0;
   width: 100%;
   justify-content: space-around;
-  flex-wrap: wrap; /* フレックスボックスをラップ */
+  flex-wrap: wrap;
 }
 
 .number-selector button {
   width: 40px;
   height: 40px;
-  margin: 5px; /* スペースを均等にする */
+  margin: 5px;
   font-size: 1.2em;
   color: #fff;
   background-color: #00796b;
@@ -90,17 +89,21 @@ h1 {
 }
 
 .number-selector button.selected {
-  background-color: #ff5722; /* よりわかりやすい色 */
-  transform: scale(1.1); /* 選択時にサイズを少し拡大 */
+  background-color: #ff5722;
+  transform: scale(1.1);
 }
 
 .number-selector button:hover {
   background-color: #004d40;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 button {
-  display: block;
-  margin: 20px auto;
   padding: 10px 20px;
   font-size: 1em;
   color: #fff;
@@ -115,10 +118,9 @@ button:hover {
   background-color: #004d40;
 }
 
-/* メディアクエリを追加してレスポンシブデザインを対応 */
 @media (max-width: 600px) {
   .sudoku-grid td {
-    height: 30px; /* 小さい画面向けに高さを調整 */
+    height: 30px;
     font-size: 1.2em;
   }
 
